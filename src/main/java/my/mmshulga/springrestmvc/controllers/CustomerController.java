@@ -35,7 +35,14 @@ public class CustomerController {
     }
 
     @PutMapping("{id}")
-    public ResponseEntity<CustomerDTO> updateExistingCustomer(@PathVariable Long id, @RequestBody CustomerDTO customerDTO) {
+    public ResponseEntity<CustomerDTO> updateExistingCustomer(@PathVariable Long id,
+                                                              @RequestBody CustomerDTO customerDTO) {
         return ResponseEntity.ok(customerService.updateCustomer(id, customerDTO));
+    }
+
+    @PatchMapping("{id}")
+    public ResponseEntity<CustomerDTO> patchExistingCustomer(@PathVariable Long id,
+                                                             @RequestBody CustomerDTO customerDTO) {
+        return ResponseEntity.ok(customerService.patchCustomer(id, customerDTO));
     }
 }
