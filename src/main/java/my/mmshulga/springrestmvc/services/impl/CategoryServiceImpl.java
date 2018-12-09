@@ -2,6 +2,7 @@ package my.mmshulga.springrestmvc.services.impl;
 
 import my.mmshulga.api.v1.mapper.CategoryMapper;
 import my.mmshulga.api.v1.model.CategoryDTO;
+import my.mmshulga.api.v1.model.CategoryDTOList;
 import my.mmshulga.springrestmvc.repositories.CategoryRepository;
 import my.mmshulga.springrestmvc.services.CategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,12 +24,18 @@ public class CategoryServiceImpl implements CategoryService {
     }
 
     @Override
-    public List<CategoryDTO> getAllCategories() {
-        return categoryRepository
+    public CategoryDTOList getAllCategories() {
+        CategoryDTOList categoryDTOList = new CategoryDTOList();
+
+        List<CategoryDTO> categories = categoryRepository
                 .findAll()
                 .stream()
                 .map(categoryMapper::categoryToCategoryDTO)
                 .collect(Collectors.toList());
+
+        categoryDTOList.setCategories(categories);
+
+        return categoryDTOList;
     }
 
     @Override
