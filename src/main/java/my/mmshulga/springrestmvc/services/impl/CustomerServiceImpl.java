@@ -3,6 +3,7 @@ package my.mmshulga.springrestmvc.services.impl;
 import my.mmshulga.api.v1.mapper.CustomerMapper;
 import my.mmshulga.api.v1.model.CustomerDTO;
 import my.mmshulga.api.v1.model.CustomerDTOList;
+import my.mmshulga.exceptions.ResourceNotFoundException;
 import my.mmshulga.springrestmvc.model.Customer;
 import my.mmshulga.springrestmvc.repositories.CustomerRepository;
 import my.mmshulga.springrestmvc.services.CustomerService;
@@ -44,7 +45,7 @@ public class CustomerServiceImpl implements CustomerService {
                 .customerToCustomerDTO(
                         customerRepository
                         .findById(id)
-                        .orElseThrow(NullPointerException::new)
+                        .orElseThrow(ResourceNotFoundException::new)
                 );
     }
 
@@ -73,7 +74,7 @@ public class CustomerServiceImpl implements CustomerService {
 
             CustomerDTO returned = customerMapper.customerToCustomerDTO(customerRepository.save(customer));
             return returned;
-        }).orElseThrow(RuntimeException::new);
+        }).orElseThrow(ResourceNotFoundException::new);
     }
 
     @Override
