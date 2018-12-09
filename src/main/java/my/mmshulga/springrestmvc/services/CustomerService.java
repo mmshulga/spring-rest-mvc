@@ -6,4 +6,5 @@ import my.mmshulga.api.v1.model.CustomerDTOList;
 public interface CustomerService {
     CustomerDTOList getAllCustomers();
     CustomerDTO getCustomerById(Long id);
+    CustomerDTO createNewCustomer(CustomerDTO customerDTO);
 }

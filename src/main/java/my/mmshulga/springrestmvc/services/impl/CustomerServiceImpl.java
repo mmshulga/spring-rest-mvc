@@ -3,6 +3,7 @@ package my.mmshulga.springrestmvc.services.impl;
 import my.mmshulga.api.v1.mapper.CustomerMapper;
 import my.mmshulga.api.v1.model.CustomerDTO;
 import my.mmshulga.api.v1.model.CustomerDTOList;
+import my.mmshulga.springrestmvc.model.Customer;
 import my.mmshulga.springrestmvc.repositories.CustomerRepository;
 import my.mmshulga.springrestmvc.services.CustomerService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -45,5 +46,12 @@ public class CustomerServiceImpl implements CustomerService {
                         .findById(id)
                         .orElseThrow(NullPointerException::new)
                 );
+    }
+
+    @Override
+    public CustomerDTO createNewCustomer(CustomerDTO customerDTO) {
+        Customer customer = customerMapper.customerDTOToCustomer(customerDTO);
+        Customer savedCustomer = customerRepository.save(customer);
+        return customerMapper.customerToCustomerDTO(savedCustomer);
     }
 }
