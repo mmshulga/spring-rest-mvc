@@ -1,4 +1,4 @@
-package my.mmshulga.api.v1.model;
+package my.mmshulga.springrestmvc.api.v1.model;
 
 import lombok.Data;
 

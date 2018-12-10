@@ -1,9 +1,9 @@
-package my.mmshulga.api.v1.model;
+package my.mmshulga.springrestmvc.api.v1.model;
 
 import lombok.Data;
 
 @Data
-public class VendorDTO {
+public class CategoryDTO {
     private Long id;
     private String name;
 }

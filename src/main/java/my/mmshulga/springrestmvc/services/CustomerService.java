@@ -1,7 +1,7 @@
 package my.mmshulga.springrestmvc.services;
 
-import my.mmshulga.api.v1.model.CustomerDTO;
-import my.mmshulga.api.v1.model.CustomerDTOList;
+import my.mmshulga.springrestmvc.api.v1.model.CustomerDTO;
+import my.mmshulga.springrestmvc.api.v1.model.CustomerDTOList;
 
 public interface CustomerService {
     CustomerDTOList getAllCustomers();

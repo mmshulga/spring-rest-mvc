@@ -1,8 +1,8 @@
 package my.mmshulga.springrestmvc.services.impl;
 
-import my.mmshulga.api.v1.mapper.CategoryMapper;
-import my.mmshulga.api.v1.model.CategoryDTO;
-import my.mmshulga.api.v1.model.CategoryDTOList;
+import my.mmshulga.springrestmvc.api.v1.mapper.CategoryMapper;
+import my.mmshulga.springrestmvc.api.v1.model.CategoryDTO;
+import my.mmshulga.springrestmvc.api.v1.model.CategoryDTOList;
 import my.mmshulga.springrestmvc.repositories.CategoryRepository;
 import my.mmshulga.springrestmvc.services.CategoryService;
 import org.springframework.beans.factory.annotation.Autowired;

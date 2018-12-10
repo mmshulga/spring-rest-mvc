@@ -1,6 +1,6 @@
-package my.mmshulga.api.v1.mapper;
+package my.mmshulga.springrestmvc.api.v1.mapper;
 
-import my.mmshulga.api.v1.model.VendorDTO;
+import my.mmshulga.springrestmvc.api.v1.model.VendorDTO;
 import my.mmshulga.springrestmvc.model.Vendor;
 import org.mapstruct.Mapper;
 import org.mapstruct.factory.Mappers;

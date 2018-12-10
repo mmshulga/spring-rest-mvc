@@ -1,9 +1,9 @@
 package my.mmshulga.springrestmvc.services.impl;
 
-import my.mmshulga.api.v1.mapper.VendorMapper;
-import my.mmshulga.api.v1.model.VendorDTO;
-import my.mmshulga.api.v1.model.VendorDTOList;
-import my.mmshulga.exceptions.ResourceNotFoundException;
+import my.mmshulga.springrestmvc.api.v1.mapper.VendorMapper;
+import my.mmshulga.springrestmvc.api.v1.model.VendorDTO;
+import my.mmshulga.springrestmvc.api.v1.model.VendorDTOList;
+import my.mmshulga.springrestmvc.exceptions.ResourceNotFoundException;
 import my.mmshulga.springrestmvc.model.Vendor;
 import my.mmshulga.springrestmvc.repositories.VendorRepository;
 import my.mmshulga.springrestmvc.services.VendorService;

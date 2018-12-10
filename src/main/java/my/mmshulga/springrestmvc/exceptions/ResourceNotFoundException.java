@@ -1,4 +1,4 @@
-package my.mmshulga.exceptions;
+package my.mmshulga.springrestmvc.exceptions;
 
 public class ResourceNotFoundException extends RuntimeException {
     public ResourceNotFoundException() {

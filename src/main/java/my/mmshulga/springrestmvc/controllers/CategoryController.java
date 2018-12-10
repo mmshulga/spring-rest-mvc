@@ -1,7 +1,7 @@
 package my.mmshulga.springrestmvc.controllers;
 
-import my.mmshulga.api.v1.model.CategoryDTO;
-import my.mmshulga.api.v1.model.CategoryDTOList;
+import my.mmshulga.springrestmvc.api.v1.model.CategoryDTO;
+import my.mmshulga.springrestmvc.api.v1.model.CategoryDTOList;
 import my.mmshulga.springrestmvc.services.CategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

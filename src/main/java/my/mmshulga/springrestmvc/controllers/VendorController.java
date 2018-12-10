@@ -1,7 +1,7 @@
 package my.mmshulga.springrestmvc.controllers;
 
-import my.mmshulga.api.v1.model.VendorDTO;
-import my.mmshulga.api.v1.model.VendorDTOList;
+import my.mmshulga.springrestmvc.api.v1.model.VendorDTO;
+import my.mmshulga.springrestmvc.api.v1.model.VendorDTOList;
 import my.mmshulga.springrestmvc.services.VendorService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
