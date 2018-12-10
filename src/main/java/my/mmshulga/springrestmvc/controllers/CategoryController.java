@@ -4,13 +4,10 @@ import my.mmshulga.api.v1.model.CategoryDTO;
 import my.mmshulga.api.v1.model.CategoryDTOList;
 import my.mmshulga.springrestmvc.services.CategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.*;
 
-@Controller
+@RestController
 @RequestMapping("/api/v1/categories/")
 public class CategoryController {
     private final CategoryService categoryService;
@@ -21,12 +18,14 @@ public class CategoryController {
     }
 
     @GetMapping
-    public ResponseEntity<CategoryDTOList> getAllCategories() {
-        return ResponseEntity.ok(categoryService.getAllCategories());
+    @ResponseStatus(HttpStatus.OK)
+    public CategoryDTOList getAllCategories() {
+        return categoryService.getAllCategories();
     }
 
     @GetMapping("{name}")
-    public ResponseEntity<CategoryDTO> getCategoryByName(@PathVariable String name) {
-        return ResponseEntity.ok(categoryService.findCategoryByName(name));
+    @ResponseStatus(HttpStatus.OK)
+    public CategoryDTO getCategoryByName(@PathVariable String name) {
+        return categoryService.findCategoryByName(name);
     }
 }
