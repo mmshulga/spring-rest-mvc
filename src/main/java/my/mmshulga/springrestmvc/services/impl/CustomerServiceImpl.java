@@ -72,8 +72,7 @@ public class CustomerServiceImpl implements CustomerService {
                 customer.setLastName(customerDTO.getLastName());
             }
 
-            CustomerDTO returned = customerMapper.customerToCustomerDTO(customerRepository.save(customer));
-            return returned;
+            return saveCustomer(customer);
         }).orElseThrow(ResourceNotFoundException::new);
     }
 
@@ -85,6 +84,4 @@ public class CustomerServiceImpl implements CustomerService {
     private CustomerDTO saveCustomer(Customer customer) {
         return customerMapper.customerToCustomerDTO(customerRepository.save(customer));
     }
-
-
 }
